@@ -184,6 +184,11 @@ namespace s2
 			return indexof(o) != -1;
 		}
 
+		void sort(int (*f)(const void *, const void *))
+		{
+			qsort(m_buffer, m_length, sizeof(T), f);
+		}
+
 		T &operator [](size_t index)
 		{
 			return m_buffer[index];
