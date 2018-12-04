@@ -9,3 +9,5 @@ all:
 	gcc 2.cpp $(CFLAGS) -o 2.exe
 3:
 	gcc 3.cpp $(CFLAGS) -o 3.exe
+4:
+	gcc 4.cpp $(CFLAGS) -o 4.exe
