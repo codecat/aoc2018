@@ -69,7 +69,7 @@ int main()
 					break;
 				}
 			}
-			
+
 			if (diff == 1) {
 				s2::string diffLine = line.substr(0, diffIndex);
 				diffLine += line.substr(diffIndex + 1);
