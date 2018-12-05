@@ -6,15 +6,12 @@
 
 int main()
 {
-	FILE* fh = fopen("input/1.input", "r");
-
 	// Read all delta values
 	s2::list<int> deltas;
 
+	FILE* fh = fopen("input/1.input", "r");
 	char buffer[24];
-	while (!feof(fh)) {
-		fgets(buffer, 24, fh);
-
+	while (fgets(buffer, 24, fh)) {
 		size_t len = strlen(buffer);
 		buffer[--len] = '\0';
 		if (len == 0) {
@@ -22,16 +19,14 @@ int main()
 		}
 
 		char op;
-		int delta;
-		if (sscanf(buffer, "%c%d", &op, &delta) != 2) {
-			continue;
-		}
+		int delta = 0;
+		if (sscanf(buffer, "%c%d", &op, &delta) == 2) {
+			if (op == '-') {
+				delta = -delta;
+			}
 
-		if (op == '-') {
-			delta = -delta;
+			deltas.add(delta);
 		}
-
-		deltas.add(delta);
 	}
 
 	// Part 1: Sum all deltas

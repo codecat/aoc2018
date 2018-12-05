@@ -21,14 +21,8 @@ int main()
 
 	FILE* fh = fopen("input/3.input", "r");
 	char buffer[80];
-	while (!feof(fh)) {
-		fgets(buffer, 80, fh);
-
+	while (fgets(buffer, 80, fh)) {
 		size_t len = strlen(buffer);
-		if (len == 0) {
-			continue;
-		}
-
 		buffer[--len] = '\0';
 		if (len == 0) {
 			continue;

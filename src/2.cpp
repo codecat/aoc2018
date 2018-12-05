@@ -12,14 +12,8 @@ int main()
 
 	FILE* fh = fopen("input/2.input", "r");
 	char buffer[30];
-	while (!feof(fh)) {
-		fgets(buffer, 30, fh);
-
+	while (fgets(buffer, 30, fh)) {
 		size_t len = strlen(buffer);
-		if (len == 0) {
-			break;
-		}
-
 		buffer[--len] = '\0';
 
 		if (len != 0) {
