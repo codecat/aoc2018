@@ -10,7 +10,7 @@ int main()
 	// Read all the lines
 	s2::list<s2::string> lines;
 
-	FILE* fh = fopen("2.input", "r");
+	FILE* fh = fopen("input/2.input", "r");
 	char buffer[30];
 	while (!feof(fh)) {
 		fgets(buffer, 30, fh);

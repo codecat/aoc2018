@@ -106,7 +106,7 @@ int main()
 	// Read events from file
 	s2::list<Event> events;
 
-	FILE* fh = fopen("4.input", "r");
+	FILE* fh = fopen("input/4.input", "r");
 	char buffer[80];
 	while (!feof(fh)) {
 		fgets(buffer, 80, fh);

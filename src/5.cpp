@@ -43,7 +43,7 @@ static char g_buffer[g_size];
 int main()
 {
 	// Load the input string
-	FILE* fh = fopen("5.input", "r");
+	FILE* fh = fopen("input/5.input", "r");
 	fread(g_buffer, 1, g_size, fh);
 	fclose(fh);
 

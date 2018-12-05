@@ -19,7 +19,7 @@ int main()
 	// Load all rectangles in memory
 	s2::list<Rect> rects;
 
-	FILE* fh = fopen("3.input", "r");
+	FILE* fh = fopen("input/3.input", "r");
 	char buffer[80];
 	while (!feof(fh)) {
 		fgets(buffer, 80, fh);

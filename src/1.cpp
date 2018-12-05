@@ -6,7 +6,7 @@
 
 int main()
 {
-	FILE* fh = fopen("1.input", "r");
+	FILE* fh = fopen("input/1.input", "r");
 
 	// Read all delta values
 	s2::list<int> deltas;
