@@ -98,7 +98,7 @@ int main()
 				if (p == cur) {
 					closest = &p;
 					inPoint = true;
-					if (sums[y * width + x - 1] > 10000) {
+					if (sums[y * width + x - 1] >= 10000) {
 						sum = -1;
 					}
 					break;
