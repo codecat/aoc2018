@@ -96,6 +96,17 @@ namespace s2
 			clear_memory();
 		}
 
+		list &operator =(const list &copy)
+		{
+			clear_memory();
+			size_t copylen = copy.len();
+			ensure_memory(copylen);
+			for (size_t i = 0; i < copylen; i++) {
+				add(copy[i]);
+			}
+			return *this;
+		}
+
 		list &operator =(std::initializer_list<T> l)
 		{
 			clear_memory();
@@ -219,17 +230,6 @@ namespace s2
 			return constiterator(this, m_length);
 		}
 
-	private:
-		void clear_memory()
-		{
-			clear();
-			if (m_buffer != nullptr) {
-				free(m_buffer);
-				m_buffer = nullptr;
-				m_allocSize = 0;
-			}
-		}
-
 		void ensure_memory(size_t count)
 		{
 			if (m_allocSize >= count) {
@@ -242,6 +242,17 @@ namespace s2
 
 			m_buffer = (T*)realloc(m_buffer, count * sizeof(T));
 			m_allocSize = count;
+		}
+
+	private:
+		void clear_memory()
+		{
+			clear();
+			if (m_buffer != nullptr) {
+				free(m_buffer);
+				m_buffer = nullptr;
+				m_allocSize = 0;
+			}
 		}
 	};
 }
