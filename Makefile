@@ -13,3 +13,5 @@ all:
 	gcc src/4.cpp $(CFLAGS) -o 4.exe
 5:
 	gcc src/5.cpp $(CFLAGS) -o 5.exe
+6:
+	gcc src/6.cpp $(CFLAGS) -o 6.exe
