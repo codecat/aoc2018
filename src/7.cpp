@@ -61,26 +61,6 @@ int main()
 		step.dependencies.add(dep);
 	}
 
-	g_steps.sort([](const void* pa, const void* pb) {
-		auto &a = *(const Step*)pa;
-		auto &b = *(const Step*)pb;
-
-		if (a.letter > b.letter) { return 1; }
-		if (a.letter < b.letter) { return -1; }
-		return 0;
-	});
-
-	for (auto &step : g_steps) {
-		step.dependencies.sort([](const void* pa, const void* pb) {
-			char a = *(const char*)pa;
-			char b = *(const char*)pb;
-
-			if (a > b) { return 1; }
-			if (a < b) { return -1; }
-			return 0;
-		});
-	}
-
 	// Part 1: Find the correct order of all the steps
 	s2::list<char> order;
 	{
