@@ -9,3 +9,4 @@ There's some improvements that could've been made. I don't really want to go bac
 * Day 1 part 2 is really slow. There's tricks on making it faster, but I didn't really bother optimizing that part too much after submitting my answer.
 * Day 4 is a mess. A cool and relatively organized mess, but still a mess. This could've been done with a lot less code, but I don't dislike my end result either way.
 * Day 6 could've been sped up with a quad tree. I'm sure there are also other tricks that could've optimized it, but the execution time is acceptable either way. Part 2 is probably also not valid on every input given, considering I'm filling in the points in the region based on its left coordinate.
+* Day 11 could've been optimized better. At the time of writing I wasn't sure how to do it any faster, so I just decided to go with the "dumb" approach. It still runs in 7 seconds on my machine which is acceptable for this kind of puzzle.
