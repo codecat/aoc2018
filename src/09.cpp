@@ -97,8 +97,8 @@ int main()
 	fscanf(fh, "%d players; last marble is worth %d points", &numPlayers, &lastMarble);
 	fclose(fh);
 
-	printf("Part 1: %llu\n", calculateMaxScore(numPlayers, lastMarble));
-	printf("Part 2: %llu\n", calculateMaxScore(numPlayers, lastMarble * 100));
+	printf("Part 1: %lu\n", calculateMaxScore(numPlayers, lastMarble));
+	printf("Part 2: %lu\n", calculateMaxScore(numPlayers, lastMarble * 100));
 
 	return 0;
 }
