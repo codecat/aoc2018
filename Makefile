@@ -3,7 +3,7 @@ CFLAGS = -std=c++11 -lstdc++ -lm -O3 -Wno-unused-result
 def:
 	@echo "Use make <number>."
 
-all: 1 2 3 4 5 6 7 8 9 10 11 12 13
+all: 1 2 3 4 5 6 7 8 9 10 11 12 13 14
 
 1:
 	gcc src/01.cpp $(CFLAGS) -o 1.exe
@@ -31,3 +31,5 @@ all: 1 2 3 4 5 6 7 8 9 10 11 12 13
 	gcc src/12.cpp $(CFLAGS) -o 12.exe
 13:
 	gcc src/13.cpp $(CFLAGS) -o 13.exe
+14:
+	gcc src/14.cpp $(CFLAGS) -o 14.exe
